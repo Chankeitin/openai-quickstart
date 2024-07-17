@@ -1,3 +1,30 @@
+# HomeWork 
+## 01 GPT-V4 日记识别
+> 代码定位和运行结果：https://github.com/Chankeitin/openai-quickstart/blob/main/openai_api/gpt-4v.ipynb
+
+描述：
+1. 上传日记图片
+2. 识别日记内容，并用markdown格式输出
+
+## 02 Open-translator 语言翻译
+> 代码定位：https://github.com/Chankeitin/openai-quickstart/tree/main/openai-translator
+
+>运行效果：https://github.com/Chankeitin/openai-quickstart/blob/main/openai-translator/tests/test_translated.md
+
+描述：
+1. 配置language命令行参数，修改translate_pdf参数
+2. 运行启动命令
+```
+python ai_translator/main.py --model_type OpenAIModel --openai_api_key $OPENAI_API_KEY --file_format markdown --book tests/test.pdf --openai_model gpt-3.5-turbo --language 日文
+```
+
+## 03 Langchain 条件判断
+> 代码定位和运行结果：https://github.com/Chankeitin/openai-quickstart/blob/main/langchain/jupyter/chains/router_chain.ipynb
+
+描述：
+1.添加生物、计算机和汉语言文学template和prompt配置，依次执行
+2.提出相关领域的问题并校验判断结果
+
 # OpenAI 快速入门
 
 <p align="center">
