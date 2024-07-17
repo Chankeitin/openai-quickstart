@@ -7,8 +7,8 @@ from langchain_community.vectorstores import FAISS
 
 
 def initialize_sales_bot(vector_store_dir: str="real_estates_sale"):
-    db = FAISS.load_local(vector_store_dir, OpenAIEmbeddings())
-    llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
+    db = FAISS.load_local(vector_store_dir, OpenAIEmbeddings(), allow_dangerous_deserialization=True)
+    llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, openai_api_base="https://api.xiaoai.plus/v1")
     
     global SALES_BOT    
     SALES_BOT = RetrievalQA.from_chain_type(llm,
@@ -40,13 +40,13 @@ def sales_chat(message, history):
 def launch_gradio():
     demo = gr.ChatInterface(
         fn=sales_chat,
-        title="房产销售",
+        title="苹果官方旗舰店销售",
         # retry_btn=None,
         # undo_btn=None,
         chatbot=gr.Chatbot(height=600),
     )
 
-    demo.launch(share=True, server_name="0.0.0.0")
+    demo.launch(share=True, server_name="127.0.0.1")
 
 if __name__ == "__main__":
     # 初始化房产销售机器人
