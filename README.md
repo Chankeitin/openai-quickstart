@@ -22,8 +22,53 @@ python ai_translator/main.py --model_type OpenAIModel --openai_api_key $OPENAI_A
 > 代码定位和运行结果：https://github.com/Chankeitin/openai-quickstart/blob/main/langchain/jupyter/chains/router_chain.ipynb
 
 描述：
-1.添加生物、计算机和汉语言文学template和prompt配置，依次执行
-2.提出相关领域的问题并校验判断结果
+
+1. 添加生物、计算机和汉语言文学template和prompt配置，依次执行
+2. 提出相关领域的问题并校验判断结果
+
+### 04 sales chatbot的扩展使用
+
+>代码定位和运行结果：https://github.com/Chankeitin/openai-quickstart/blob/main/langchain/sales_chatbot/customer_sales_chatbot
+
+1. 生成苹果官方旗舰店客服的对话话术，并保存到apple_sales_data.txt文件
+
+2. 读取的文件，生成向量数据库，存储问答键值对
+
+3. 当向量数据库中没有寻找合适答案时，用LLM+细致化的prompt来回答客户问题，而不是直接告诉用户我是一个AI机器人。
+
+附带测试效果图
+
+![chat1](.\chat1.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # OpenAI 快速入门
 
