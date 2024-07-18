@@ -38,11 +38,7 @@ python ai_translator/main.py --model_type OpenAIModel --openai_api_key $OPENAI_A
 
 附带测试效果图
 
-![chat1](.\chat1.png)
-
-
-
-
+![chat1](https://github.com/Chankeitin/openai-quickstart/blob/main/chat1.png)
 
 
 
